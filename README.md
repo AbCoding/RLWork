@@ -4,27 +4,43 @@ My attempt to recreate the algorithms I am learning in my Reinforcement Learning
 
 The portfolio is organized into focused mini-projects and larger projects that compare multiple algorithms on the same task. Each project should explain the problem, how the algorithm works, what happened in experiments, and how the findings relate to other concepts in reinforcement learning.
 
+## First research theme: from DQN to Rainbow
+
+The initial goal is to reimplement and investigate the main ideas in [Rainbow: Combining Improvements in Deep Reinforcement Learning](https://arxiv.org/abs/1710.02298), with my own explanations, experiments, and conclusions.
+
+This work has two parts:
+
+1. **Foundations through two mini-projects:** establish a simple DQN baseline across LunarLander and a few other environments, then compare DQN variants and replay buffers on LunarLander.
+2. **Main Rainbow project:** implement all six improvements, combine them, study their contributions through ablations, and investigate selected follow-up research that extends or questions the original findings.
+
+The progression is baseline DQN → variants and buffers → Rainbow and follow-up investigations. Each stage will connect theory to implementation and evidence, following the general approach of my class homework.
+
 ## Project index
 
 ### Mini-projects
 
 | Project | Problem / environment | Algorithms | Status |
 | --- | --- | --- | --- |
+| [Mini-project 01: basic DQN](miniProject_01_dqn/) | LunarLander + a few additional discrete-action environments (selection pending) | Baseline DQN with uniform replay | Goals defined |
+| [Mini-project 02: variants and buffers](miniProject_02_dqn_variants/) | LunarLander (discrete actions) | DQN, Double DQN, Dueling DQN; uniform replay and PER | Goals defined |
 | [miniProject_X](miniProject_X/) | To be chosen | To be chosen | Reusable template |
 
 ### Large projects
 
 | Project | Shared task / environment | Algorithms compared | Status |
 | --- | --- | --- | --- |
+| [Rainbow reproduction and follow-up investigations](large_projects/rainbow/) | Benchmark suite to be selected | Six improvements, combined Rainbow, ablations, and selected extensions | Goals defined |
 | [Project template](large_projects/project_template/) | To be chosen | To be chosen | Reusable template |
 
-These entries are starting templates. Implementations and experimental results will be added as the portfolio develops.
+The two mini-projects and the Rainbow project have their goals defined. Template entries remain available for future work. Implementations and experimental results will be added as the portfolio develops.
 
 ## Repository structure
 
 ```text
 RLWork/
 ├── README.md                          # Portfolio overview and project index
+├── miniProject_01_dqn/                 # Basic DQN across several environments
+├── miniProject_02_dqn_variants/        # Algorithm variants and replay buffers
 ├── miniProject_X/                     # Template for a focused mini-project
 │   ├── README.md                      # Problem, goals, setup, and run instructions
 │   ├── algorithms/README.md           # Algorithm descriptions and theory
@@ -33,6 +49,9 @@ RLWork/
 │   └── conclusions.md                 # Lessons and connections to other concepts
 └── large_projects/
     ├── README.md                      # Overview of larger comparative projects
+    ├── rainbow/                       # Rainbow reproduction, ablations, and follow-up work
+    │   ├── README.md                  # Main project goals and paper-aligned plan
+    │   └── literature.md              # Research leads and reproduction questions
     └── project_template/
         ├── README.md                  # Shared task and comparison questions
         ├── algorithms/README.md       # Theory and differences between methods
