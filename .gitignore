@@ -1,0 +1,41 @@
+# Python environments, caches, and build outputs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local credentials and machine-specific files
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+
+# Large or generated experiment artifacts
+checkpoints/
+datasets/
+logs/
+runs/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+events.out.tfevents.*
+
+# Keep small curated metrics, figures, and reports in project results/ folders.
